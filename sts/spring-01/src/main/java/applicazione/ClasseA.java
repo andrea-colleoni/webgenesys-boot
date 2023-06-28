@@ -25,7 +25,7 @@ public class ClasseA  {
 	
 	@PostConstruct
 	public void dopoLaCostruzione() {
-		System.out.println("costruito");
+		System.out.println("costruito classe A");
 	}
 	
 	@PreDestroy
