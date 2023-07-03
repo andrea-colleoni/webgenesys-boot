@@ -6,7 +6,7 @@
 
 - Definirlo come packaging WAR
 - Usare il contenuto del repo github del corso per definire la configurazione iniziale (Initializer e WebConfigurer)
-- Deployare su un tomcat (v 0 se usate spring < 6; >= 10 se usate spring >= 6)
+- Deployare su un tomcat (v (MAX) 9 se usate spring < 6; >= 10 se usate spring >= 6)
 
 ## al bootstrap dell'applicazione (=> onStartup())
 
