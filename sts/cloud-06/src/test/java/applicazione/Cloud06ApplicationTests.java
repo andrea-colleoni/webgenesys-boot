@@ -1,13 +1,13 @@
-package esercizio;
+package applicazione;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Esercizio04ApplicationTests {
+class Cloud06ApplicationTests {
 
 	@Test
 	void contextLoads() {
-	}	
-	
+	}
+
 }

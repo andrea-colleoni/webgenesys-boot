@@ -1,4 +1,6 @@
-package applicazione;
+package applicazione.controller;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,9 +18,16 @@ public class AutoreController {
 	@Autowired
 	private AutoreRepository repo;
 	
+	@GetMapping
+	public List<Autore> all() {
+		var autori = repo.findAll();
+		return autori;
+	}
+	
 	@GetMapping("/{codiceFiscale}")
 	public Autore byCodice(@PathVariable(required = true) String codiceFiscale) {
-		return repo.findById(codiceFiscale).orElse(null);
+		var autore = repo.findById(codiceFiscale).orElse(null);
+		return autore;
 	}
 
 }

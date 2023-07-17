@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "d88606af-d482-4e8d-ad44-8cf4a72bff6d",
+		"name": "Biblio (boot05)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "388006"
+	},
+	"item": [
+		{
+			"name": "Libri",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/libri"
+			},
+			"response": []
+		},
+		{
+			"name": "Autori",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/autori"
+			},
+			"response": []
+		},
+		{
+			"name": "Nuovo libro (cascade)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\": \"123456789\",\r\n    \"titolo\": \"Il Signore degli Anelli\",\r\n    \"numeroPagine\": 1300,\r\n    \"autore\": {\r\n        \"codiceFiscale\": \"JRRT\",\r\n        \"nome\": \"John RR\",\r\n        \"cognome\": \"Tolkien\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/libri"
+			},
+			"response": []
+		}
+	]
+}

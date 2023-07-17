@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "304bd23d-3522-4b3e-bd14-b64d6b592d47",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "388006"
+	},
+	"item": [
+		{
+			"name": "Auth KO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ko@mail.com\",\r\n    \"password\": \"ko\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/auth/authenticate"
+			},
+			"response": []
+		},
+		{
+			"name": "Auth OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/auth/authenticate"
+			},
+			"response": []
+		},
+		{
+			"name": "Secured",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlhdCI6MTY4OTYwNDk4MSwiZXhwIjoxNjg5NjkxMzgxfQ.QbIvxX5j2J6caqcANRE20bQnUSjNreZKTBM9Mr_hctQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/secured-controller"
+			},
+			"response": []
+		},
+		{
+			"name": "Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlhdCI6MTY4OTYwNDk4MSwiZXhwIjoxNjg5NjkxMzgxfQ.QbIvxX5j2J6caqcANRE20bQnUSjNreZKTBM9Mr_hctQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/secured-controller"
+			},
+			"response": []
+		}
+	]
+}

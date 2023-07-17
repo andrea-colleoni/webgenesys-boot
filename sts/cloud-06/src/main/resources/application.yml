@@ -1,0 +1,10 @@
+spring:
+    application:
+        name: config-server
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/andrea-colleoni/webgenesys-boot
+server:
+    port: 8888
